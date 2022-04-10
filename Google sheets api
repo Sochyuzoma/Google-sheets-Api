@@ -1,0 +1,14 @@
+import gspread
+
+sa = gspread.service_account(r'C:\Users\Sochi\%APPDATA%\gspread\service_account.json')
+sh = sa.open("APRIL PPMV ORDER 2022")
+wks = sh.worksheet("FACILITIIES")
+
+print(wks.get_all_values())
+
+# mkdir %APPDATA%\gspread
+# move C:\Users\Sochi\Downloads\ppmv.json %APPDATA%\gspread\service_account.json
+
+
+# import pip
+# pip.main(["install", "oauth2client"])
